@@ -16,9 +16,10 @@ body{
             width: 300px;
         }
 
-        h2 {
+        h1 {
             text-align: center;
             margin-bottom: 20px;
+            color: #4cae4c;
         }
 
         input[type="text"],
@@ -38,6 +39,7 @@ body{
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-bottom: 10px;
           
         }
 
@@ -45,18 +47,240 @@ body{
             background-color: #4cae4c;
         }
 
-        .restorer {
+        .restoter {
             text-align: right;
             font-size: 12px;
+            margin-top: 10%;
         }
 
         .restorer a {
             color: #5cb85c;
             text-decoration: none;
+          
         }
 
         .restorer a:hover {
             text-decoration: underline;
         }
 
+       /* style pour l'utilisateurs  */
+
+        body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .actions button {
+      padding: 10px 15px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .actions button:hover {
+      background: #2980b9;
+    }
+
+    .actions input {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #3498db;
+      color: white;
+    }
+
+    tr:hover {
+      background: #f1f1f1;
+    }
+
+    .btn-edit {
+      background: #f1c40f;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-delete {
+      background: #e74c3c;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-edit:hover {
+      background: #d4ac0d;
+    }
+
+    .btn-delete:hover {
+      background: #c0392b;
+    }
    
+
+
+
+    /* ------------------------------------------------------------------------- */
+
+
+    /* Styles pour le corps de la page pour une meilleure visualisation */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Bouton pour ouvrir le modal */
+#openModalBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#openModalBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Le modal lui-même (la fenêtre qui s'ouvre) */
+.modal {
+  display: none; /* C'est ce qui le rend invisible par défaut */
+  position: fixed; /* Reste en place même si l'utilisateur fait défiler la page */
+  z-index: 1000; /* Assure que le modal est au-dessus de tout le reste */
+  left: 0;
+  top: 0;
+  width: 100%; /* Couvre toute la largeur de l'écran */
+  height: 100%; /* Couvre toute la hauteur de l'écran */
+  overflow: auto; /* Permet le défilement si le contenu est trop grand */
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour assombrir l'arrière-plan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Le conteneur du contenu du modal */
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Animation pour l'apparition du modal */
+@keyframes animatetop {
+  from { top: -300px; opacity: 0; }
+  to { top: 0; opacity: 1; }
+}
+
+/* Bouton de fermeture (le 'X') */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Styles pour le formulaire d'enregistrement */
+h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+#dataForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#dataForm label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+#dataForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#dataForm input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+#dataForm button[type="submit"] {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#dataForm button[type="submit"]:hover {
+  background-color: #218838;
+}
